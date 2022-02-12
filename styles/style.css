@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body {
+    background: rgb(46,7,15);
+    background: linear-gradient(90deg, rgba(46,7,15,1) 0%, rgba(125,0,39,1) 100%); 
+}
+
+.cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.473)
+}
+
+.cabeçalho nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0 60px;
+    gap: 30px;
+}
+
+.cabeçalho nav ul li a {
+    padding: 30px 10px;
+    border-radius: 20px;
+    color: antiquewhite;
+}
+
+.cabeçalho nav ul li a:hover {
+    color: black;
+    background-color: beige;
+    transition: all 200ms;
+}
+
+#foto-rosto {
+    width: 90px;
+    padding: 30px;
+    border-radius: 100%;
+}
+
+main h1 {
+    color: antiquewhite;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.principal {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: auto;
+}
+
+#caixa-texto {
+    margin: 50px;
+    color: antiquewhite;
+    background-color: rgba(0, 0, 0, 0.425);
+    padding: 50px;
+    border-radius: 40px;
+    max-width: 800px;
+}
+
+#caixa-imagens {
+    margin: 50px;
+    display: flex;
+    gap: 100px;
+}
+
+.caixa-imagem {
+    color: antiquewhite;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.caixa-imagem h3 {
+    padding: 30px;
+}
+
+.rodapé {
+    color: antiquewhite;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.425);
+}
