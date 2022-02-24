@@ -16,28 +16,41 @@ body {
     background-color: rgba(240, 248, 255, 0.473)
 }
 
-.cabeçalho nav ul {
-    list-style: none;
+#checkmenu {
+    display: none;
+}
+
+.cabeçalho nav label {
+    font-size: 45px;
+    margin: 30px;
+}
+
+#checkmenu:checked ~ ul{
     display: flex;
-    margin: 0 60px;
-    gap: 30px;
+}
+
+.cabeçalho nav ul {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.788);
+    list-style: none;
+    display: none;
+    flex-flow: column;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+}
+
+.cabeçalho nav ul li {
+    margin: 30px auto;
 }
 
 .cabeçalho nav ul li a {
-    padding: 30px 10px;
-    border-radius: 20px;
     color: antiquewhite;
 }
 
-.cabeçalho nav ul li a:hover {
-    color: black;
-    background-color: beige;
-    transition: all 200ms;
-}
-
 #foto-rosto {
-    width: 90px;
-    padding: 30px;
+    width: 50px;
+    padding: 10px;
     border-radius: 100%;
 }
 
@@ -55,17 +68,17 @@ main h1 {
 }
 
 #caixa-texto {
-    margin: 50px;
+    margin-top: 30px;
     color: antiquewhite;
     background-color: rgba(0, 0, 0, 0.425);
-    padding: 50px;
-    border-radius: 40px;
-    max-width: 800px;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 #caixa-imagens {
     margin: 50px;
     display: flex;
+    flex-flow: column;
     gap: 100px;
 }
 
@@ -82,7 +95,125 @@ main h1 {
 }
 
 .rodapé {
+    margin-top: 50px;
     color: antiquewhite;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.425);
+}
+
+@media(min-width: 690px) {
+
+    .principal {
+        margin: auto;
+        margin-top: 50px;
+        flex-flow: row;
+    }
+
+    .cabeçalho nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cabeçalho nav ul {
+        background-color: transparent;
+        position: relative;
+        margin: auto;
+        padding: 0px;
+        display: flex;
+        flex-flow: row;
+        width: auto;
+    }
+
+    .cabeçalho nav label {
+        display: none;
+    }
+
+    .cabeçalho nav ul li {
+        margin: 0 30px;
+        padding: 0px;
+    }
+
+    #caixa-texto {
+        margin: auto;
+    }
+
+    #caixa-imagens {
+        margin: auto;
+    }
+
+}
+
+@media(min-width: 1200px){
+
+    .cabeçalho {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .cabeçalho nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0 60px;
+        gap: 30px;
+    }
+    
+    .cabeçalho nav ul li a {
+        padding: 30px 10px;
+        border-radius: 20px;
+    }
+    
+    .cabeçalho nav ul li a:hover {
+        color: black;
+        background-color: beige;
+        transition: all 200ms;
+    }
+    
+    #foto-rosto {
+        width: 90px;
+        padding: 30px;
+        border-radius: 100%;
+    }
+    
+    main h1 {
+        text-align: center;
+        padding-top: 40px;
+    }
+    
+    .principal {
+        align-items: center;
+        margin: auto;
+    }
+    
+    #caixa-texto {
+        margin: auto;
+        margin-top: 50px;
+        padding: 50px;
+        border-radius: 40px;
+        max-width: 800px;
+    }
+    
+    #caixa-imagens {
+        margin: auto;
+        display: flex;
+        gap: 100px;
+    }
+    
+    .caixa-imagem {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin: 0 30px;
+    }
+    
+    .caixa-imagem h3 {
+        padding: 30px;
+    }
+    
+    .rodapé {
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.425);
+    }
+
+
 }
